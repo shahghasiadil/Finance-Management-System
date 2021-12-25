@@ -72,7 +72,7 @@ $(document).ready(function() {
 	if($('.select').length > 0) {
 		$('.select').selectpicker({
 			minimumResultsForSearch: -1,
-			width: '100%'
+			width: '100%',
 		});
 	}
 	

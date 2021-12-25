@@ -1,0 +1,33 @@
+{
+    
+    "dashboard":"Dashboard",
+    "customer":"Customers",
+    "orders":"Orders",
+    "services":"Services",
+    "expenses":"Expenses",
+    "incomes":"Incomes",
+    "employees":"Employees",
+    "report":"Reports",
+    "users":"Users",
+    "activity_log":"Activity Log",
+    "settings":"Settings",
+    "previous":"Previous",
+    "next":"Next",
+
+
+
+
+    "title":"Tailoring Management System",
+    "add_button":"Add",
+    "search":"Search...",
+    "id":"ID",
+    "name":"Name",
+    "phone":"Phone",
+    "address":"Address",
+    "created_at":"Register Date",
+    "action":"Action"
+
+
+
+
+}

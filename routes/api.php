@@ -17,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+Route::apiResource('/system_users', 'UsersController');
+Route::get('/get_roles', 'UsersController@get_roles');
+Route::get('/search_users', 'UsersController@search_users');
+Route::get('/get_users', 'UsersController@get_users');
+// Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+// Route::get('login', [
+//     'as' => 'login',
+//     'uses' => 'Auth\LoginController@showLoginForm'
+// ])->name('login');

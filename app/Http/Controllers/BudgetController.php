@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Customer;
+use App\BudgetCatCode;
+use App\BudgetCode;
 use Illuminate\Http\Request;
+use Psy\CodeCleaner\ReturnTypePass;
 
-class CustomerController extends Controller
+class BudgetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +16,25 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return Customer::latest()->paginate(10);
+        //
+    }
+    public function get_budgetcode()
+    {
+        return BudgetCode::latest()->paginate(10);
     }
 
+    public function search_budgetcode()
+    {
+        if ($search = request()->get('q')) {
+            return BudgetCode::where(function ($query) use ($search) {
+                $query->where('name', 'LIKE', "%$search%")
+                    ->orWhere('code', 'LIKE', "%$search%")
+                    ->orWhere('type', 'LIKE', "%$search%");
+            })->paginate(10);
+        } else {
+            return BudgetCode::latest()->paginate(10);
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -35,15 +53,19 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
+        //
         $this->validate($request, [
-            'name'  => 'required|string|max:255',
-            'phone' => 'required|string|max:13',
+            'name' => 'required|string',
+            'code' => 'required',
+            'type' => 'required|string',
+            'description' => 'required|max:255',
         ]);
 
-        return Customer::create([
-            'name' => $request['name'],
-            'phone' => $request['phone'],
-            'address' => $request['address'],
+        BudgetCode::create([
+            'name' => $request->name,
+            'code' => $request->code,
+            'type' => $request->type,
+            'description' => $request->description
         ]);
     }
 
@@ -79,6 +101,15 @@ class CustomerController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $budgetcode = BudgetCode::findOrFail($id);
+        $this->validate($request, [
+            'name' => 'required|string',
+            'code' => 'required',
+            'type' => 'required|string',
+            'description' => 'required|max:255',
+        ]);
+        $input = $request->all();
+        $budgetcode->update($input);
     }
 
     /**
@@ -89,6 +120,7 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $budgetcode = BudgetCode::findOrFail($id);
+        $budgetcode->delete();
     }
 }

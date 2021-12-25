@@ -300,3 +300,5 @@ input[type=number] {
 .table.custom-table > tbody > tr > td, .table.custom-table > tbody > tr > th, .table.custom-table > tfoot > tr > td, .table.custom-table > tfoot > tr > th, .table.custom-table > thead > tr > td, .table.custom-table > thead > tr > th {
     padding: 10px 3px;
     vertical-align: middle;}
+
+    

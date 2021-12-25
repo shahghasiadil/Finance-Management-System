@@ -9,6 +9,8 @@
 
 <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+
 <script src="{{asset('assets/js/dari_aff.js')}}"></script>
 
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->

@@ -42,16 +42,16 @@
 					
 					<div class="account-box">
 						<div class="account-wrapper">
-							<h3 class="account-title">TMS</h3>
-							<p class="account-subtitle">Artisan Tailoring Management System</p>
+							<h3 class="account-title">FMS</h3>
+							<p class="account-subtitle">Artisan Finance Management System</p>
 							
                             <!-- Account Form -->
-                            <form method="POST" action="{{ route('login') }}">
+                            <form method="POST" action="{{ route('login', app()->getLocale()) }}">
                                 @csrf
 								<div class="form-group">
-                                    <label>Email Address</label>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                    @error('email')
+                                    <label>User Name</label>
+                                    <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus>
+                                    @error('user_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

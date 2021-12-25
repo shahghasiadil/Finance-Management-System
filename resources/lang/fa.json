@@ -1,0 +1,25 @@
+{
+    "dashboard":"داشبورد",
+    "customer":"مشتری",
+    "orders":"سفارشات",
+    "services":"خدمات",
+    "expenses":"مصارف",
+    "incomes":"درآمد ",
+    "employees":"کارمندان",
+    "report":"گزارشات",
+    "users":"استفاده کننده ها",
+    "activity_log":"گزارش فعالبت ها",
+    "settings":"تنظیمات",
+    "previous":"قبلی",
+    "next":"بعدی",
+
+    "title":"سیستم مدیریت خیاطی",
+    "add_button":"اضافه کردن",
+    "search":"جستجو ...",
+    "id":"آی دی",
+    "name":"اسم",
+    "phone":"شماره تماس",
+    "address":"آدرس",
+    "created_at":"تاریخ ثبت",
+    "action":"عملیات"
+}

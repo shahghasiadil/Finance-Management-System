@@ -19,6 +19,7 @@ function viewPhoto(input) {
 }
 
 
+
 function addSelectItem(t,ev)
 {
    ev.stopPropagation();
@@ -255,6 +256,5 @@ $('button[name=addRow]').click(function(e){
     $new.find('input[type=number]').val(0);
     autoCalcSetup();
 });
-
 
 
